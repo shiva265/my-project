@@ -8,6 +8,10 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_run:
+    workflows: [Java CI with Gradle]
+    types:
+      - completed
 
 jobs:
   build-java:
